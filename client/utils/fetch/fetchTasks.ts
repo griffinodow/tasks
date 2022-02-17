@@ -16,12 +16,15 @@ export const fetchGetTasks = async (
   id: string,
   uuid: string
 ): Promise<StatusSuccess<Task[]> | StatusFail | StatusError> => {
-  const res = await fetch(`http://localhost:5000/lists/${uuid}/tasks`, {
-    method: "GET",
-    headers: {
-      authorization: `Bearer ${id}`,
-    },
-  });
+  const res = await fetch(
+    `https://api-tasks.griffindow.com/lists/${uuid}/tasks`,
+    {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${id}`,
+      },
+    }
+  );
   const json = await res.json();
   return json;
 };
@@ -38,14 +41,17 @@ export const fetchPostTask = async (
   listUuid: string,
   task: Task
 ): Promise<StatusSuccess<Task> | StatusFail | StatusError> => {
-  const res = await fetch(`http://localhost:5000/lists/${listUuid}/tasks`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      authorization: `Bearer ${id}`,
-    },
-    body: JSON.stringify(task),
-  });
+  const res = await fetch(
+    `https://api-tasks.griffindow.com/lists/${listUuid}/tasks`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${id}`,
+      },
+      body: JSON.stringify(task),
+    }
+  );
 
   const json = await res.json();
   return json;
@@ -64,7 +70,7 @@ export const fetchPutTask = async (
   task: Task
 ): Promise<StatusSuccess<Task> | StatusFail | StatusError> => {
   const res = await fetch(
-    `http://localhost:5000/lists/${listUuid}/tasks/${task.uuid}`,
+    `https://api-tasks.griffindow.com/lists/${listUuid}/tasks/${task.uuid}`,
     {
       method: "PUT",
       headers: {
@@ -95,7 +101,7 @@ export const fetchDeleteTask = async (
   uuid: string
 ): Promise<StatusDelete | StatusFail | StatusError> => {
   const res = await fetch(
-    `http://localhost:5000/lists/${listUuid}/tasks/${uuid}`,
+    `https://api-tasks.griffindow.com/lists/${listUuid}/tasks/${uuid}`,
     {
       method: "DELETE",
       headers: {

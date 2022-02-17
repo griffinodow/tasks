@@ -14,7 +14,7 @@ import {
 export const fetchGetLists = async (
   id: string
 ): Promise<StatusSuccess<List[]> | StatusFail | StatusError> => {
-  const res = await fetch("http://localhost:5000/lists", {
+  const res = await fetch("https://api-tasks.griffindow.com/lists", {
     method: "GET",
     headers: {
       authorization: `Bearer ${id}`,
@@ -34,7 +34,7 @@ export const fetchPostLists = async (
   id: string,
   list: List
 ): Promise<StatusSuccess<List[]> | StatusFail | StatusError> => {
-  const res = await fetch("http://localhost:5000/lists", {
+  const res = await fetch("https://api-tasks.griffindow.com/lists", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -59,7 +59,7 @@ export const fetchPutList = async (
   uuid: string,
   name: string
 ): Promise<StatusSuccess<List> | StatusFail | StatusError> => {
-  const res = await fetch(`http://localhost:5000/lists/${uuid}`, {
+  const res = await fetch(`https://api-tasks.griffindow.com/lists/${uuid}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -83,7 +83,7 @@ export const fetchDeleteList = async (
   id: string,
   uuid: string
 ): Promise<StatusDelete | StatusFail | StatusError> => {
-  const res = await fetch(`http://localhost:5000/lists/${uuid}`, {
+  const res = await fetch(`https://api-tasks.griffindow.com/lists/${uuid}`, {
     method: "DELETE",
     headers: {
       authorization: `Bearer ${id}`,

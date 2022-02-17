@@ -13,7 +13,7 @@ import {
 export const fetchGetUser = async (
   id: string
 ): Promise<StatusSuccess<User> | StatusFail | StatusError> => {
-  const res = await fetch(`http://localhost:5000/users/${id}`, {
+  const res = await fetch(`https://api-tasks.griffindow.com/users/${id}`, {
     method: "GET",
   });
   const json = await res.json();
@@ -27,7 +27,7 @@ export const fetchGetUser = async (
 export const fetchPostUser = async (): Promise<
   StatusSuccess<User> | StatusFail | StatusError
 > => {
-  const res = await fetch("http://localhost:5000/users", {
+  const res = await fetch("https://api-tasks.griffindow.com/users", {
     method: "POST",
   });
   const json = await res.json();
