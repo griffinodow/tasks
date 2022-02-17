@@ -12,6 +12,7 @@ export const Lists = ({
   id,
   lists,
   handleFail,
+  setMenuOpen,
 }: {
   /**
    * The user ID.
@@ -25,6 +26,10 @@ export const Lists = ({
    * The failure handler.
    */
   handleFail: Function;
+  /**
+   * Handles closing the dropdown menu.
+   */
+  setMenuOpen: Function;
 }) => {
   const [globalEditing, setGlobalEditing] = useState(false);
 
@@ -39,6 +44,7 @@ export const Lists = ({
           globalEditing={globalEditing}
           setGlobalEditing={setGlobalEditing}
           handleFail={handleFail}
+          setMenuOpen={setMenuOpen}
         />
       ))}
     </section>
