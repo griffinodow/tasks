@@ -67,7 +67,7 @@ const Home = ({
    */
   useEffect(() => {
     if (!id) router.push("/login");
-  }, [id, router]);
+  }, [id]);
 
   /**
    * If the user is missing any information it can be refetched.
@@ -105,7 +105,7 @@ const Home = ({
     } else {
       getLists();
     }
-  }, [init.lists, init.tasksList, createLists, createTasks, id, init.id]);
+  }, [init.lists, init.tasksList]);
 
   /**
    * Handles fail conditions with requests on the dashboard.
