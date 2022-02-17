@@ -1,0 +1,11 @@
+FROM node:alpine
+WORKDIR /home/node/app
+COPY ./client ./client
+COPY ./interfaces ./interfaces
+WORKDIR /home/node/app/client
+RUN npm install 
+RUN npm run build
+RUN npm prune --production
+ENV NODE_ENV production
+CMD npm start
+EXPOSE 80
