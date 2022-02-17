@@ -19,6 +19,7 @@ export const List = ({
   globalEditing,
   setGlobalEditing,
   handleFail,
+  setMenuOpen,
 }: {
   /**
    * The user ID.
@@ -44,6 +45,10 @@ export const List = ({
    * Handle failure statuses.
    */
   handleFail: Function;
+  /**
+   * Handle closing the dropdown menu.
+   */
+  setMenuOpen: Function;
 }) => {
   const router = useRouter();
   const ref: any = useRef();
@@ -93,6 +98,7 @@ export const List = ({
   const handleChangeDisplayedList = () => {
     if (selectedUuid === uuid) return;
     setSelectedUuid(uuid);
+    setMenuOpen(false);
   };
 
   /**
