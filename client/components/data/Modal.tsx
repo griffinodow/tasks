@@ -33,7 +33,7 @@ export const Modal = ({
       <div className={`${styles.modal} shadow`}>
         <section>
           <span>{header}</span>
-          <button onClick={handleCloseButton}>
+          <button aria-label="close" onClick={handleCloseButton}>
             <MdClose size={24} />
           </button>
         </section>
