@@ -162,7 +162,7 @@ export const List = ({
       <div>
         {editing ? (
           <div className={styles.updatebtns}>
-            <button onClick={handleDeleteList}>
+            <button aria-label="delete" onClick={handleDeleteList}>
               <MdDelete size={24} />
             </button>
           </div>
