@@ -11,7 +11,7 @@ import styles from "./login.module.css";
  * The login page React component.
  * @returns The login page React component.
  */
-const Login = () => {
+const login = () => {
   const router = useRouter();
   const { id } = useUser();
 
@@ -20,7 +20,7 @@ const Login = () => {
    */
   useEffect(() => {
     if (id) router.push("/");
-  }, [id, router]);
+  }, [id]);
 
   return (
     <main className={styles.login}>
@@ -39,7 +39,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default login;
 
 /**
  * Handles server side rendering. Redirects user to dashboard if logged in.
