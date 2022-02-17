@@ -179,7 +179,7 @@ export const Task = ({
   return (
     <div ref={ref} className={styles.task}>
       <section>
-        <button onClick={handleToggleComplete}>
+        <button aria-label="toggle complete" onClick={handleToggleComplete}>
           {complete ? (
             <MdDone size={24} />
           ) : (
@@ -204,12 +204,12 @@ export const Task = ({
       </section>
       <section>
         {editing ? (
-          <button onClick={handleDeleteTask}>
+          <button aria-label="delete" onClick={handleDeleteTask}>
             <MdDelete size={24} />
           </button>
         ) : (
           !globalEditing && (
-            <button onClick={handleToggleEditing}>
+            <button aria-label="edit" onClick={handleToggleEditing}>
               <MdEdit size={24} />
             </button>
           )
