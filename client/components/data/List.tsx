@@ -166,12 +166,12 @@ export const List = ({
               <MdDelete size={24} />
             </button>
           </div>
-        ) : !globalEditing ? (
-          <button aria-label="Edit">
-            <MdEdit onClick={handleToggleEdit} size={24} />
-          </button>
         ) : (
-          <></>
+          !globalEditing && (
+            <button aria-label="Edit">
+              <MdEdit onClick={handleToggleEdit} size={24} />
+            </button>
+          )
         )}
       </div>
     </div>
