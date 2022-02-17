@@ -38,8 +38,8 @@ export const Modal = ({
           </button>
         </section>
         <section>
-          {messages.map((message) => (
-            <p>{message}</p>
+          {messages.map((message, index) => (
+            <p key={index}>{message}</p>
           ))}
         </section>
       </div>
