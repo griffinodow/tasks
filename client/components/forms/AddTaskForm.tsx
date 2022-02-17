@@ -72,7 +72,7 @@ export const AddTaskForm = ({
         placeholder="Create a task"
         autoComplete="off"
       ></input>
-      <button type="submit">
+      <button aria-label="add" type="submit">
         <MdAdd size={24} />
       </button>
     </form>
