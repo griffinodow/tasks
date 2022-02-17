@@ -79,9 +79,20 @@ export const DropDownMenu = ({
       {open && (
         <div ref={refMenu} className={`${styles.menu} shadow`}>
           {lists.length > 0 && (
-            <Lists id={id} lists={lists} handleFail={handleFail} />
+            <Lists
+              id={id}
+              lists={lists}
+              handleFail={handleFail}
+              setMenuOpen={setOpen}
+            />
           )}
-          {<AddListForm id={id} handleFail={handleFail} />}
+          {
+            <AddListForm
+              id={id}
+              handleFail={handleFail}
+              setMenuOpen={setOpen}
+            />
+          }
         </div>
       )}
     </div>

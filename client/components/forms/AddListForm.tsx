@@ -14,6 +14,7 @@ import styles from "./AddListForm.module.css";
 export const AddListForm = ({
   id,
   handleFail,
+  setMenuOpen,
 }: {
   /**
    * The user ID.
@@ -23,6 +24,10 @@ export const AddListForm = ({
    * The fail handler.
    */
   handleFail: Function;
+  /**
+   * Sets if the drop down menu is open.
+   */
+  setMenuOpen: Function;
 }) => {
   const router = useRouter();
   const { register, handleSubmit, reset } = useForm();
@@ -41,7 +46,7 @@ export const AddListForm = ({
 
       createList(list);
       reset();
-
+      setMenuOpen(false);
       const json = await fetchPostLists(id, list);
       if (json.status === "fail") {
         deleteList(list.uuid);
