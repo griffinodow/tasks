@@ -11,7 +11,7 @@ import styles from "./login.module.css";
  * The login page React component.
  * @returns The login page React component.
  */
-const login = () => {
+const Login = () => {
   const router = useRouter();
   const { id } = useUser();
 
@@ -39,7 +39,7 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
 
 /**
  * Handles server side rendering. Redirects user to dashboard if logged in.
