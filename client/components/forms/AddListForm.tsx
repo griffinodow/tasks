@@ -68,7 +68,7 @@ export const AddListForm = ({
         placeholder="Add a list"
         autoComplete="off"
       ></input>
-      <button type="submit">
+      <button aria-label="add" type="submit">
         <MdAdd size={24} />
       </button>
     </form>
