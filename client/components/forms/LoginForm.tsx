@@ -99,7 +99,7 @@ export const LoginForm = () => {
           Login
         </button>
         <span>
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <button
             type="button"
             className="secondary"
