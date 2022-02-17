@@ -1,5 +1,6 @@
 /server/docs
 /server/node_modules
+/server/dist
 /client/doc
 /client/node_modules
 /client/.next
