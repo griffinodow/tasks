@@ -74,7 +74,7 @@ export const List = ({
     return () => {
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
-  }, [globalEditing, editing, setGlobalEditing]);
+  }, [globalEditing, editing]);
 
   /**
    * Toggles the editing state.
