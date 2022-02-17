@@ -1,10 +1,8 @@
 FROM node:alpine
 WORKDIR /home/node/app
-COPY package.json .
-COPY package-lock.json .
-COPY tsconfig.json .
-COPY src ./src
-RUN ls -l
+COPY ./server ./server
+COPY ./interfaces ./interfaces
+WORKDIR /home/node/app/server
 RUN npm install 
 RUN npm run build
 RUN npm prune --production
