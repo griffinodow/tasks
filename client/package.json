@@ -1,0 +1,32 @@
+{
+  "name": "tasks-app",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "docs": "typedoc --entryPointStrategy expand ./ --entryPointStrategy expand ../interfaces --exclude \"**/+(node_modules|.next|.js)/**\" --exclude \"next.config.js\""
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.7.2",
+    "next": "12.0.10",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.27.0",
+    "react-icons": "^4.3.1",
+    "universal-cookie": "^4.0.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.17",
+    "@types/react": "17.0.39",
+    "@types/uuid": "^8.3.4",
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.10",
+    "i": "^0.3.7",
+    "npm": "^8.5.0",
+    "typedoc": "^0.22.11",
+    "typescript": "4.5.5"
+  }
+}

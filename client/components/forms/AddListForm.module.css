@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form > input {
+  padding: 8px 0;
+  margin-right: 8px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.form > button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.form > button:hover {
+  color: var(--tertiary);
+  cursor: pointer;
+}

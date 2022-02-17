@@ -1,0 +1,61 @@
+body {
+  --white: #ffffff;
+  --off-white: #f7f7f7;
+  --black: #000000;
+  --off-black: #131313;
+  --near-black: #1e1e1e;
+  --smurf-blue: #00a3ff;
+  --pastel-blue: #0072db;
+  --gray: #e1e1e1;
+  --light-gray: #848395;
+  --red: #ff0000;
+}
+
+body {
+  --primary: var(--smurf-blue);
+  --on-primary: var(--white);
+  --secondary: var(--pastel-blue);
+  --on-secondary: var(--white);
+  --secondary-variant: var(--smurf-blue);
+  --on-secondary-variant: var(--white);
+  --tertiary: var(--light-gray);
+  --on-tertiary: var(--black);
+  --error: var(--red);
+  --on-error: var(--white);
+  --surface: var(--white);
+  --on-surface: var(--black);
+  --background: var(--off-white);
+  --on-background: var(--black);
+}
+
+.error {
+  color: var(--error);
+}
+
+.on-primary {
+  color: var(--on-primary);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.primary-bg {
+  background-color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.secondary-bg {
+  background-color: var(--on-secondary);
+}
+
+.tertiary {
+  color: var(--tertiary);
+}
+
+.tertiary-bg {
+  background-color: var(--tertiary);
+}

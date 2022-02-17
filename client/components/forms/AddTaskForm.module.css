@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.form > button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.form > input {
+  padding: 16px 0;
+  width: 100%;
+  margin-right: 16px;
+  border: none;
+  outline: none;
+}

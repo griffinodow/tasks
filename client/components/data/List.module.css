@@ -1,0 +1,51 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  min-height: 32px;
+}
+
+.list button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+
+.list button:hover {
+  cursor: pointer;
+  color: var(--tertiary);
+}
+
+.updatebtns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.list input {
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid var(--tertiary);
+  outline: none;
+}
+
+.list form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  padding-right: 4px;
+}
+
+.switchbtn {
+  border-bottom: 1px solid var(--white) !important;
+}

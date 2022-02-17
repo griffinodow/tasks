@@ -1,0 +1,56 @@
+.task {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task > section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.task > section:nth-child(1) {
+  width: 100%;
+  margin-right: 8px;
+  overflow: hidden;
+}
+
+.task span {
+  border-bottom: 1px solid white;
+}
+
+.task button {
+  border: none;
+  outline: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.task button:hover {
+  cursor: pointer;
+  color: var(--tertiary);
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.form > input {
+  width: 100%;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}

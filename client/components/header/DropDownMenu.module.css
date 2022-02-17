@@ -1,0 +1,40 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.menu {
+  width: 100%;
+  position: absolute;
+  padding: 16px;
+  border-radius: 16px;
+  z-index: 2;
+  margin-top: 4px;
+  background-color: #ffffff;
+}
+
+.menu section {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--tertiary);
+}
+
+.wrapper span {
+  overflow: hidden;
+}
