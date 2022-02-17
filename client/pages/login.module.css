@@ -16,10 +16,6 @@
   align-items: center;
 }
 
-.login span button {
-  background-color: #e9e9ed;
-}
-
 .login span button:hover {
   cursor: pointer;
   color: var(--secondary-variant);
