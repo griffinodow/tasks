@@ -60,23 +60,23 @@ export const AddTaskForm = ({
     }
   };
 
-  return uuid ? (
-    <form
-      onSubmit={handleSubmit(handleCreateTask)}
-      className={`${styles.form} shadow`}
-    >
-      <input
-        {...register("name", {
-          required: true,
-        })}
-        placeholder="Create a task"
-        autoComplete="off"
-      ></input>
-      <button aria-label="add" type="submit">
-        <MdAdd size={24} />
-      </button>
-    </form>
-  ) : (
-    <></>
+  return (
+    uuid && (
+      <form
+        onSubmit={handleSubmit(handleCreateTask)}
+        className={`${styles.form} shadow`}
+      >
+        <input
+          {...register("name", {
+            required: true,
+          })}
+          placeholder="Create a task"
+          autoComplete="off"
+        ></input>
+        <button aria-label="add" type="submit">
+          <MdAdd size={24} />
+        </button>
+      </form>
+    )
   );
 };

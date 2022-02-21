@@ -32,25 +32,26 @@ export const Tasks = ({
   handleFail: Function;
 }) => {
   const [globalEditing, setGlobalEditing] = useState(false);
-  return uuid && tasksList.length > 0 ? (
-    <div className={styles.tasks}>
-      {tasksList
-        .find((tasksList) => tasksList.uuid === uuid)
-        ?.tasks.map((task) => (
-          <Task
-            id={id}
-            key={task.uuid}
-            listUuid={uuid}
-            uuid={task.uuid}
-            name={task.name}
-            complete={task.complete}
-            globalEditing={globalEditing}
-            setGlobalEditing={setGlobalEditing}
-            handleFail={handleFail}
-          />
-        ))}
-    </div>
-  ) : (
-    <></>
+  return (
+    uuid &&
+    tasksList.length > 0 && (
+      <div className={styles.tasks}>
+        {tasksList
+          .find((tasksList) => tasksList.uuid === uuid)
+          ?.tasks.map((task) => (
+            <Task
+              id={id}
+              key={task.uuid}
+              listUuid={uuid}
+              uuid={task.uuid}
+              name={task.name}
+              complete={task.complete}
+              globalEditing={globalEditing}
+              setGlobalEditing={setGlobalEditing}
+              handleFail={handleFail}
+            />
+          ))}
+      </div>
+    )
   );
 };
